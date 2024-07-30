@@ -371,7 +371,7 @@
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Đơn hàng hôm nay</h6>
-                        <a class="btn btn-outline-info m-2" href="/orderListBillController">Tất cả</a>
+                        <a class="btn btn-outline-info m-2" href="orderListBillController">Tất cả</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">

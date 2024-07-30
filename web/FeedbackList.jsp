@@ -123,11 +123,11 @@
                             <span class="d-none d-lg-inline-flex">${sessionScope.account.user_name}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="userProfile" class="dropdown-item">My Profile</a>
-                            <a href="home" class="dropdown-item">Home Page</a>
+                            <a href="userProfile" class="dropdown-item">Thông tin cá nhân</a>
+                            <a href="home" class="dropdown-item">Trang chủ</a>
                             <c:choose>
-                                <c:when test="${ not empty sessionScope.account}"><a href="${pageContext.request.contextPath}/userLogout" class="dropdown-item">Logout</a></c:when>
-                                <c:otherwise><a href="${pageContext.request.contextPath}/login" class="dropdown-item">Logout</a></c:otherwise>
+                                <c:when test="${ not empty sessionScope.account}"><a href="${pageContext.request.contextPath}/userLogout" class="dropdown-item">Đăng xuất</a></c:when>
+                                <c:otherwise><a href="${pageContext.request.contextPath}/login" class="dropdown-item">Đăng xuất</a></c:otherwise>
                             </c:choose>
                         </div>
                     </div>

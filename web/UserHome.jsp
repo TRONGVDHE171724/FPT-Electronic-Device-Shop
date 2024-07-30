@@ -107,7 +107,7 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="title">Sản Phẩm Mới</h3>
-                            
+
                         </div>
                     </div>
                     <!-- /section title -->
@@ -186,32 +186,24 @@
                             <ul class="hot-deal-countdown">
                                 <li>
                                     <div>
-                                        <h3>02</h3>
-                                        <span>Ngày</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <h3>10</h3>
+                                        <h3 id="current-hours"></h3>
                                         <span>Giờ</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3>34</h3>
+                                        <h3 id="current-minutes"></h3>
                                         <span>Phút</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <h3>60</h3>
+                                        <h3 id="current-seconds"></h3>
                                         <span>Giây</span>
                                     </div>
                                 </li>
                             </ul>
-                            <h2 class="text-uppercase">Sản phẩm ưu đãi lớn</h2>
-                            <p>Bộ sưu tập mới giảm đến 50%</p>
-                            <a class="primary-btn cta-btn" href="#">Mua ngay</a>
+                            <h2 class="text-uppercase">Chào mừng đến Fed Shop</h2>
                         </div>
                     </div>
                 </div>
@@ -279,7 +271,7 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="product-btns">
-                                                        
+
                                                         <button class="quick-view"><a href="product?pid=${np.getProduct_id()}"><i class="fa fa-eye"></i></a><span class="tooltipp">Xem ngay</span></button>
                                                     </div>
                                                 </div>
@@ -507,12 +499,36 @@
     </body>
 </html>
 <script>
-    function buy(Product_id) {
+                                                    function buy(Product_id) {
 
+                                                    }
+                                                    function ProductDetail(id) {
+                                                        let url = "product?pid=" + id;
+
+                                                        window.location.href = url;
+                                                    }
+</script>
+<script>
+    function updateTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        // Add leading zeros to single-digit numbers
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Update the HTML elements with the current time
+        document.getElementById("current-hours").innerHTML = hours;
+        document.getElementById("current-minutes").innerHTML = minutes;
+        document.getElementById("current-seconds").innerHTML = seconds;
     }
-    function ProductDetail(id) {
-                let url = "product?pid=" + id;
 
-                window.location.href = url;
-            }
+    // Update the time every second
+    setInterval(updateTime, 1000);
+
+    // Initialize the time on page load
+    updateTime();
 </script>

@@ -25,7 +25,8 @@ import vn.fpt.edu.models.User;
 @WebServlet(name = "VerifyPhoneController", urlPatterns = {"/verifyPhoneController"})
 public class VerifyPhoneController extends HttpServlet {
 
-    
+    private static final String ACCOUNT_SID = "ACab4dc06d6c0a47685379eaf8782b4783";
+    private static final String AUTH_TOKEN = "4bcfd52b2c63fc7a9313ba80fa05b559";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -34,6 +35,7 @@ public class VerifyPhoneController extends HttpServlet {
         phoneNumber = "+84" + phoneNumber.substring(1);
         String verificationCode = generateVerificationCode();
         request.getSession().setAttribute("verificationCode", verificationCode);
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Message message = Message.creator(
                 new PhoneNumber(phoneNumber),
                 new PhoneNumber("+17206368985"),

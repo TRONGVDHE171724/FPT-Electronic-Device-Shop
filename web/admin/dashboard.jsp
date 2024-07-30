@@ -153,7 +153,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Total)</div>
+                                                Total amount</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="earning">0đ</div>
                                         </div>
                                         <div class="col-auto">
@@ -236,7 +236,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold">Trending Overview</h6>
+                                    <h6 class="m-0 font-weight-bold">Order report</h6>
                                     <div class="dropdown no-arrow">
                                         <div class="d-flex">
                                         <div class="me-2">
@@ -272,7 +272,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold">Amount of category</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">

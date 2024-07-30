@@ -189,7 +189,6 @@
                             </div>
                         </div>
                         <div class="item-footer">
-                            <a href="cart?billid=${b.getBill_id()}"><button class="buy-again">Mua Lần Nữa</button></a>
                             <a href="viewMyOrderDetail?billid=${b.getBill_id()}"><button class="view-order">Xem Chi Tiết Đơn Hàng</button></a>
                             <!--                        <button class="view-shop">Xem Đánh Giá Shop</button>-->
                         </div>

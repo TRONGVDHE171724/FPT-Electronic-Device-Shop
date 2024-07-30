@@ -184,7 +184,7 @@
                             <img src="images/${o.product1.getProduct_img()}" alt="Product Image">
                         </div>
                         <div class="item-details">
-                            <h3>${o.product1.getProduct_name()}</h3>
+                            <a href="product?pid=${o.product1.getProduct_id()}"> <h3> ${o.product1.getProduct_name()}</h3></a>
                             <p>Phân loại hàng: ${o.product1.detail.getColor()}</p>
                             <p>x ${o.order.getOrder_quantity()}</p>
                             <div class="item-price">

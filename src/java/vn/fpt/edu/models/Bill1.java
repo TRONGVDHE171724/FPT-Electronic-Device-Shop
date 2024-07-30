@@ -16,6 +16,7 @@ public class Bill1 {
     private String Address;
     private String Status;
     private String User_name;
+    private String Province, District, Country;
     public Bill1() {
     }
 
@@ -26,6 +27,42 @@ public class Bill1 {
         this.Address = Address;
         this.Status = Status;
         this.User_name = User_name;
+    }
+
+    public Bill1(int Bill_id, double Total_price, String Date, String Address, String Status, String User_name, String Province, String District, String Country) {
+        this.Bill_id = Bill_id;
+        this.Total_price = Total_price;
+        this.Date = Date;
+        this.Address = Address;
+        this.Status = Status;
+        this.User_name = User_name;
+        this.Province = Province;
+        this.District = District;
+        this.Country = Country;
+    }
+
+    public String getProvince() {
+        return Province;
+    }
+
+    public void setProvince(String Province) {
+        this.Province = Province;
+    }
+
+    public String getDistrict() {
+        return District;
+    }
+
+    public void setDistrict(String District) {
+        this.District = District;
+    }
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public void setCountry(String Country) {
+        this.Country = Country;
     }
 
     

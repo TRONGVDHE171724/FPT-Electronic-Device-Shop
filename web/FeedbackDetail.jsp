@@ -67,7 +67,7 @@
             .feedback-info {
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;   
+                flex-grow: 1;
             }
 
             .info-row {
@@ -190,11 +190,11 @@
                         <span class="d-none d-lg-inline-flex">${sessionScope.account.user_name}</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <a href="userProfile" class="dropdown-item">My Profile</a>
-                        <a href="home" class="dropdown-item">Home Page</a>
+                        <a href="userProfile" class="dropdown-item">Thông tin cá nhân</a>
+                        <a href="home" class="dropdown-item">Trang chủ</a>
                         <c:choose>
-                            <c:when test="${ not empty sessionScope.account}"><a href="${pageContext.request.contextPath}/userLogout" class="dropdown-item">Logout</a></c:when>
-                            <c:otherwise><a href="${pageContext.request.contextPath}/login" class="dropdown-item">Logout</a></c:otherwise>
+                            <c:when test="${ not empty sessionScope.account}"><a href="${pageContext.request.contextPath}/userLogout" class="dropdown-item">Đăng xuất</a></c:when>
+                            <c:otherwise><a href="${pageContext.request.contextPath}/login" class="dropdown-item">Đăng xuất</a></c:otherwise>
                         </c:choose>
                     </div>
                 </div>
@@ -243,15 +243,15 @@
                                     <textarea readonly>${fbd.comment}</textarea>
                                 </div>
                                 <form action="feedbackDetailFeedbackController" method="post" style=" display: flex; align-items: center;">
-                                <div style="margin-right: 5px; margin-left: 15px; margin-top: 1rem; color: #00000030; font-weight: bold; margin-right: 20px">Trạng thái:</div>
-                                <input type="hidden" style="margin-left: 5px" name="id" value="${sessionScope.feedbackId}"/>
-                                <select name="status" onchange="this.form.submit()" class="border-0" style="width: 100px; color: #000000ad; padding: 6px 0px; border-radius: 5px; padding-left: 7px; margin-top: 1rem"/>
-                                <option ${sessionScope.status == "Hiện"?"selected":""} value="Hiện">Hiện</option>
-                                <option ${sessionScope.status == "Ẩn"?"selected":""} value="Ẩn">Ẩn</option>
-                                </select>
-                            </form>
+                                    <div style="margin-right: 5px; margin-left: 15px; margin-top: 1rem; color: #00000030; font-weight: bold; margin-right: 20px">Trạng thái:</div>
+                                    <input type="hidden" style="margin-left: 5px" name="id" value="${sessionScope.feedbackId}"/>
+                                    <select name="status" onchange="this.form.submit()" class="border-0" style="width: 100px; color: #000000ad; padding: 6px 0px; border-radius: 5px; padding-left: 7px; margin-top: 1rem"/>
+                                    <option ${sessionScope.status == "Hiện"?"selected":""} value="Hiện">Hiện</option>
+                                    <option ${sessionScope.status == "Ẩn"?"selected":""} value="Ẩn">Ẩn</option>
+                                    </select>
+                                </form>
                             </div>
-                            
+
                         </div>
 
 
